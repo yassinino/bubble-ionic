@@ -1,0 +1,7 @@
+{
+  "name": "bubble",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

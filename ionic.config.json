@@ -1,7 +1,14 @@
 {
   "name": "bubble",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
+  "proxies": [
+    {
+      "path": "/localhost",
+      "proxyUrl": "http://localhost:8000"
+    }
+  ],
   "type": "angular"
 }

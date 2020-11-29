@@ -1,0 +1,49 @@
+<ion-content [fullscreen]="true">
+ 
+    <div class="ion-padding-top picture">
+      <img [src]="user.profile" *ngIf="user.profile else picture">
+      
+            <ng-template #picture>
+              <img src="/assets/pictures/profile.png">
+            </ng-template>
+    </div>
+
+    <ion-text class="ion-text-center detail">
+      <h2>{{user.name}}</h2>
+      <p>{{user.locality}}</p>
+    </ion-text>
+
+    <div class="about ion-padding">
+      <ion-text>
+        <h3>ABOUT</h3>
+      </ion-text>
+      <p>
+        {{user.about}}
+      </p>
+
+      <ion-text>
+        <h3>ACCOUNTS</h3>
+      </ion-text>
+      <div class="accounts">
+        <ul>
+          <li>
+            <ion-img src="/assets/icons/facebook.png"></ion-img>
+          </li>
+          <li>
+            <ion-img src="/assets/icons/twitter.png"></ion-img>
+          </li>
+          <li>
+            <ion-img src="/assets/icons/linkedin.png"></ion-img>
+          </li>
+        </ul>
+        <div class="edit-icon" (click)="presentModal()">
+          <ion-img src="/assets/icons/edit.png"></ion-img>
+        </div>
+        <div class="button-edit">
+            <ion-button (click)="editProfil()">
+              Edit Profile
+            </ion-button>
+        </div>
+      </div>
+    </div>
+</ion-content>

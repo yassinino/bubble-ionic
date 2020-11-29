@@ -1,0 +1,52 @@
+<ion-content [fullscreen]="true">
+ 
+  <div class="picture">
+    <img [src]="data.profile" *ngIf="data.profile else picture">
+      
+      <ng-template #picture>
+        <img src="/assets/pictures/profile.png">
+       </ng-template>
+  </div>
+
+  <ion-text class="ion-text-center detail">
+    <h2>{{data.name}}</h2>
+    <p>{{data.locality}}</p>
+  </ion-text>
+
+  <div class="accounts">
+    <ul>
+      <li>
+        <ion-img src="/assets/icons/facebook.png"></ion-img>
+      </li>
+      <li>
+        <ion-img src="/assets/icons/twitter.png"></ion-img>
+      </li>
+      <li>
+        <ion-img src="/assets/icons/instagram.png"></ion-img>
+      </li>
+      <li style="margin-top: 4px;">
+        <ion-img src="/assets/icons/youtube.png"></ion-img>
+      </li>
+    </ul>
+  </div>
+
+  <apx-chart #chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [plotOptions]="chartOptions.plotOptions"
+      [labels]="chartOptions.labels"
+      [fill]="chartOptions.fill"
+      [stroke]="chartOptions.stroke"
+      [dataLabels]="chartOptions.dataLabels"
+  ></apx-chart>
+
+  <div class="about ion-padding">
+    <ion-text>
+      <h3>ABOUT</h3>
+    </ion-text>
+    <p>
+      {{data.about}}
+    </p>
+
+  </div>
+</ion-content>

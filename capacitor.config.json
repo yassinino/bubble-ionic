@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "bubble",
+  "appId": "com.facebooklogin.example",
+  "appName": "facebook-login",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
@@ -9,5 +9,20 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {}
+  "server": {
+    "hostname": "http://localhost:8000"
+  },
+  "cordova": {
+    "preferences": {
+      "ScrollEnabled": "false",
+      "BackupWebStorage": "none",
+      "SplashMaintainAspectRatio": "true",
+      "FadeSplashScreenDuration": "300",
+      "GOOGLE_MAPS_ANDROID_API_KEY": "AIzaSyBjSbijCwv8HfvoIT7o3mZAXYDNzdzaeJk",
+      "GOOGLE_MAPS_IOS_API_KEY": "AIzaSyDrpMQGZ1ZLByoChPL61ZkSfuI6aI0Y_e8",
+      "SplashShowOnlyFirstTime": "false",
+      "SplashScreen": "screen",
+      "SplashScreenDelay": "3000"
+    }
+  }
 }

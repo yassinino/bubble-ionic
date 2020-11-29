@@ -1,17 +1,66 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div id="map_canvas"></div>
+
+ <div class="search-bar ion-text-center">
+  <h3>
+    Rankings
+  </h3>
+
+  <ul class="buttons">
+    <li>
+      <ion-button expand="block" [class]="{'active': currentFetch == 0}" (click)="fetchLocalUsers()">Local</ion-button>
+    </li>
+    <li>
+      <ion-button expand="block" [class]="{'active': currentFetch == 1}" (click)="fetchGlobalUsers()">Global</ion-button>
+    </li>
+  </ul>
+ </div>
+
+
+ <div class="users">
+  <ul class="tabs">
+    <li [ngClass]="{'active': current == 0}" (click)="choseNetwork(0)">All</li>
+    <li [ngClass]="{'active': current == 1}" (click)="choseNetwork(1)">Facebook</li>
+    <li [ngClass]="{'active': current == 3}" (click)="choseNetwork(3)">Twitter</li>
+    <li [ngClass]="{'active': current == 2}" (click)="choseNetwork(2)">Linkedin</li>
+  </ul>
+ </div>
+
+ <ion-list lines="none">
+
+  <ion-item class="social-item" *ngFor="let user of users">
+    <ion-avatar slot="start" (click)="showProfil(user)">
+      <img [src]="user.profile" *ngIf="user.profile else picture">
+      
+      <ng-template #picture>
+        <img src="/assets/pictures/profile.png">
+       </ng-template>
+    </ion-avatar>
+    <ion-label (click)="showProfil(user)">
+      <ion-text color="dark">
+        {{user.name}}
+      </ion-text>
+      <ul class="networks">
+        <li>
+          <ion-img src="/assets/icons/facebook.png"></ion-img>
+          <ion-text slot="end">{{user.score_fb}}</ion-text>
+        </li>
+        <li>
+          <ion-img src="/assets/icons/twitter.png" slot="start"></ion-img>
+          <ion-text slot="end">{{user.score_tw}}</ion-text>
+        </li>
+        <li>
+          <ion-img src="/assets/icons/linkedin.png" slot="start"></ion-img>
+          <ion-text slot="end">{{user.score_li}}</ion-text>
+        </li>
+      </ul>
+    </ion-label>
+    <p class="ion-text-right score">
+      <span class="score-color">{{user.total_score}}</span>
+    </p>
+  </ion-item>
+
+</ion-list>
 </ion-content>

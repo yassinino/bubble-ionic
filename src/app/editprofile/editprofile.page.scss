@@ -1,0 +1,89 @@
+.detail{
+    position: relative;
+    bottom: 10px;
+    color: white;
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    font-weight: bold;
+
+    .camera{
+        position: absolute;
+        width: 30px;
+        right: 0px;
+        top: -100px;
+        background: #96bbe2;
+        width: 62px;
+        padding: 14px;
+        border-bottom-left-radius: 33px;
+        border-top-left-radius: 33px;
+    }
+}
+
+.profile{
+    height: 350px;
+
+    .picture{
+        height: 215px;
+    }
+}
+
+.inputs{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: auto;
+    width: 100%;
+}
+
+.title{
+    margin-bottom: 15px;
+    color: #acb6dd;
+}
+ion-input, ion-textarea{
+    --background: #f2f3f7;
+    --color: #898989;
+    border-radius: 5px;
+
+}
+
+.item-label-stacked .sc-ion-input-md-h, .sc-ion-input-ios-h, .native-textarea.sc-ion-textarea-ios{
+    --padding-start: 8px!important;
+    --padding-bottom: 8px!important;
+    --padding-top: 8px!important;
+    --padding-end: 8px!important;
+}
+
+.save-button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    margin-top: 20px;
+    height: 45px;
+
+    font-weight: 600;
+    --border-radius: 20px;
+    --background: linear-gradient(150deg, #b7b4db, #8bbde5);
+
+    button{
+        border-radius: 30px;
+    }
+}
+
+.cancel-button{
+    --background: white;
+    color: black;
+    font-weight: 600;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    --box-shadow: none;
+    height: 45px;
+    font-weight: 600;
+    --border-radius: 20px;
+
+    button{
+        border-radius: 30px;
+    }
+}

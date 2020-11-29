@@ -1,0 +1,52 @@
+
+.detail{
+    position: absolute;
+    top: 30%;
+    color: white;
+    display: block;
+    margin-left: auto;
+    width: 100%;
+    font-weight: bold;
+}
+
+#chart {
+    padding: 0;
+    max-width: 450px;
+    margin: 15px auto;
+    text-align:center;
+  }
+  
+
+.accounts{
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    width: 100%;
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        display: flex;
+        li{
+            float: left;
+            margin-right: 8px;
+
+            ion-img{
+                width: 25px;
+            }
+        }
+    }
+}
+
+.about{
+    background: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    h3{
+        font-weight: 600;
+        font-size: 18px;
+        color: #90bce4;
+    }
+}

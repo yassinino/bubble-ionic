@@ -1,0 +1,122 @@
+ion-title{
+    float: left;
+    color: #90bce4;
+    font-size: 14px;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .description{
+      font-size: 12px;
+      padding: 0px 15px 0px 15px;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  ion-list{
+    padding: 0px 15px 15px 15px;
+    .social-item{
+        --ion-background-color:#f2f3f7;
+        font-size: 14px;
+        color: #898989;
+        margin-bottom: 8px;
+        border-radius: 10px;
+        .checked{
+            background: linear-gradient(150deg, #b7b4db, #8bbde5);
+            color: white;
+            padding: 2px;
+            border-radius: 50%;
+        }
+        .score{
+            padding: 7px;
+        }
+        .item-native{
+            border-radius: 8px;
+        }
+    
+        ion-thumbnail{
+            width: 26px;
+            height: auto;
+        }
+    }
+}
+
+
+
+
+#toggles{
+width:60px;
+text-align:center;
+}
+.ios-toggle,.ios-toggle:active{
+position:absolute;
+height:0;
+width:0;
+opacity:0;
+border:none;
+outline:none;
+}
+.checkbox-label{
+    display: block;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    line-height: 10px;
+    width: 80%;
+    height: 20px;
+    border-radius: 18px;
+    background: #c2c2c2;
+    cursor: pointer;
+}
+.checkbox-label:before{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 1;
+    line-height: 34px;
+    text-indent: 29px;
+    height: 22px;
+    width: 22px;
+    border-radius: 100%;
+    top: 0px;
+    left: 0px;
+    right: auto;
+    background: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), 0 0 0 2px #dddddd;
+}
+.checkbox-label:after{
+content:attr(data-off);
+display:block;
+position:absolute;
+z-index:0;
+top:0;
+left:-300px;
+padding:10px;
+height:100%;
+width:300px;
+text-align:right;
+color:#c2c2c2;
+white-space:nowrap;
+}
+.ios-toggle:checked + .checkbox-label{
+/*box-shadow*/
+background: linear-gradient(150deg, #b7b4db, #8bbde5);
+}
+.ios-toggle:checked + .checkbox-label:before{
+    left: calc(100% - 20px);
+    box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+.ios-toggle:checked + .checkbox-label:after{
+content:attr(data-on);
+left:60px;
+width:20px;
+}
+/* GREEN CHECKBOX */
+

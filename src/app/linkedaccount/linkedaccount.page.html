@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-title>LINKED ACCOUNTS</ion-title>
+  <span class="close" (click)="dismiss()">&times;</span> <br>
+  <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus eos sit, vitae iusto porro rem id eius iure quia laborum blanditiis,
+  <br> tempore repellat at temporibus aliquam praesentium numquam facere voluptatum.</p>
+
+    <ion-list lines="none">
+      <ion-item class="social-item">
+        <ion-thumbnail slot="start">
+          <ion-img src="/assets/icons/facebook.png"></ion-img>
+        </ion-thumbnail>
+        <ion-label>Facebook <ion-icon name="checkmark-outline" class="checked" *ngIf="facebook"></ion-icon></ion-label>
+        <div id="toggles" class="ion-text-right score">
+            <input type="checkbox" name="checkbox1" id="checkbox1" class="ios-toggle" [checked]="facebook" (click)="linkAccount(1)"/>
+            <label for="checkbox1" class="checkbox-label"></label>
+        </div>
+      </ion-item>
+    
+      <ion-item class="social-item">
+        <ion-thumbnail slot="start">
+          <ion-img src="/assets/icons/twitter.png"></ion-img>
+        </ion-thumbnail>
+        <ion-label>Twitter <ion-icon name="checkmark-outline" class="checked" *ngIf="twitter"></ion-icon></ion-label>
+          <div id="toggles" class="ion-text-right score">
+            <input type="checkbox" name="checkbox1" id="checkbox2" class="ios-toggle" [checked]="twitter" (click)="linkAccount(3)"/>
+            <label for="checkbox2" class="checkbox-label"></label>
+          </div>
+      </ion-item>
+    
+      <ion-item class="social-item">
+        <ion-thumbnail slot="start">
+          <ion-img src="/assets/icons/linkedin.png"></ion-img>
+        </ion-thumbnail>
+        <ion-label>Linkedin <ion-icon name="checkmark-outline" class="checked" *ngIf="linkedin"></ion-icon></ion-label>
+        <div id="toggles" class="ion-text-right score">
+            <input type="checkbox" name="checkbox1" id="checkbox3" class="ios-toggle" [checked]="linkedin" (click)="linkAccount(2)"/>
+            <label for="checkbox3" class="checkbox-label"></label>
+          </div>
+      </ion-item>
+
+    </ion-list>
+
+</ion-content>

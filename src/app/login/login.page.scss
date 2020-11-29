@@ -1,0 +1,72 @@
+.login {
+   ion-label{
+    text-align: center;
+   }
+    .social-buttons{
+        padding-top: 20px;
+        text-align: center;
+        position: absolute;
+        top: 65%;
+        width: 100%;
+        background: white;
+        border-radius: 15px;
+        height: 100%;
+
+        .fb-button{
+            --background: #3b5998;
+            --border-radius : 15px;
+            width: 100%;
+            height: 80%;
+
+            .absolute-icon {
+                position: absolute;
+                left: 10px;
+                width: 12px;
+                height: auto;
+              }
+            
+        }
+
+        .tw-button{
+            --background: #00aaec;
+            --border-radius : 15px;
+            width: 100%;
+            height: 80%;
+
+            .absolute-icon {
+                position: absolute;
+                left: var(--padding-start);
+                width: 23px;
+                height: auto;
+              }
+            
+        }
+
+        .ln-button{
+            --background: #283e4a;
+            --border-radius : 15px;
+            width: 100%;
+            height: 80%;
+
+            .absolute-icon {
+                position: absolute;
+                left: var(--padding-start);
+                width: 23px;
+                height: auto;
+              }
+        }
+
+        .fb-button ion-img,
+        .fb-button span {
+        margin-right: auto;
+        }
+
+        .account{
+            font-size: 14px;
+            a{
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+}

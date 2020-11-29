@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true">
+ 
+  <div class="profile">
+    <div class="picture">
+      <img [src]="data.profile">
+    </div>
+  
+    <ion-text class="ion-text-center detail">
+      <h2>{{data.name}}</h2>
+      <p>{{data.locality}}</p>
+      <div class="camera">
+        <ion-img src="/assets/icons/camera.png" (click)="selectMedia()"></ion-img>
+      </div>
+    </ion-text>
+  </div>
+
+  <form [formGroup]="onForm" (submit)="onFormSubmit()">
+    
+  <ion-list lines="none" class="inputs">
+    <ion-item>
+      <ion-label position="stacked" class="title">DISPLAY NAME</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" class="title">EMAIL ADDRESS</ion-label>
+      <ion-input formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" class="title" for="about">ABOUT</ion-label>
+      <ion-textarea formControlName="about" rows="2" id="about"></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+
+
+  <div class="buttons">
+    <ion-button expand="block" class="save-button" type="submit" [disabled]="!onForm.valid">Save</ion-button>
+    <ion-button expand="block" class="cancel-button" (click)="cancelPage()">Cancel</ion-button>
+  </div>
+
+  </form>
+  
+</ion-content>

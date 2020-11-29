@@ -1,0 +1,35 @@
+<ion-content class="login">
+    <ion-img src="/assets/pictures/register.png"></ion-img>
+    <div class="social-buttons">
+        <ion-label class="ion-text-wrap title">
+            <ion-text>Register with...</ion-text>
+        </ion-label>
+
+        <ion-list>
+            <ion-item lines="none">
+                <ion-button expand="block" class="fb-button" (click)="FacebookLogin()">
+                    <ion-img src="/assets/icons/fb-white.png" class="absolute-icon"></ion-img>
+                    <ion-text>Facebook</ion-text>
+                </ion-button>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-button expand="block" class="tw-button" (click)="TwitLogin()">
+                        <ion-img src="/assets/icons/tw-white.png" class="absolute-icon"></ion-img>
+                        <ion-text>Twitter</ion-text>
+                </ion-button>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-button expand="block" class="ln-button" (click)="linkLogin()">
+                        <ion-icon name="logo-linkedin" class="absolute-icon"></ion-icon>
+                        <ion-img src="/assets/icons/linkedin.png" class="absolute-icon"></ion-img>
+                        <ion-text>Linkedin</ion-text>
+                </ion-button>
+            </ion-item>
+
+            <p class="account">Already have an account? <a routerLink="/login">Sign in</a></p>
+
+          </ion-list>
+    </div>
+</ion-content>
